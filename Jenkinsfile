@@ -13,9 +13,6 @@ pipeline {
 stages{
         stage('Build'){
             steps {
-                export M2_HOME=/opt/apache-maven-3.3.9 # your Mavan home path
-                export PATH=$PATH:$M2_HOME/bin
-                mvn --version
                 sh 'mvn clean package'
             }
             post {
